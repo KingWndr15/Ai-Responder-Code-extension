@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ai Text Responder</title>
+    <style>
+        /* Basic body styling */
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 0 auto;
+        }
+
+        /* Form layout styling */
+        #message-form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Input and select styling */
+        select,
+        input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /* Button styling */
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #send-button {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        #send-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Response area styling */
+        #response-area {
+            margin-top: 15px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            padding: 15px;
+            min-height: 100px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #333;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Copy button styling */
+        #copy-button {
+            display: none;
+            margin-top: 10px;
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+        }
+
+        #copy-button:hover {
+            background-color: #0069D9;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="message-form">
+        <select id="style-select">
+            <option value="friendly">Friendly</option>
+            <option value="professional">Professional</option>
+            <option value="casual">Casual</option>
+            <option value="enthusiastic">Enthusiastic</option>
+            <option value="sarcastic">Sarcastic</option>
+        </select>
+        <input type="text" id="message-input" placeholder="Optional additional context">
+        <button type="submit" id="send-button">Generate Response</button>
+    </form>
+    <div id="response-area">
+        Your AI response will appear here
+    </div>
+    <button id="copy-button">Copy Response</button>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
